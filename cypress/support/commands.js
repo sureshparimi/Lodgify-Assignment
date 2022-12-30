@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("nextMonth", (month, date) => {
+  cy.get("div.CalendarMonth_caption")
+    .first()
+    .then(($ele) => {
+      var calmonth = $ele.text();
+      if (calmonth === month) {
+        cy.get("td.CalendarDay").contains(date).first().click({ force: true });
+      } else {
+        cy.get(
+          "div.DayPickerNavigation_rightButton__horizontalDefault"
+        ).click();
+        cy.nextMonth(month, date);
+      }
+    });
+});

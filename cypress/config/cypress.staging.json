@@ -1,0 +1,7 @@
+{
+    "baseUrl": "http://localhost:8080/",
+    "chromeWebSecurity": false,
+    "defaultCommandTimeout": 60000,
+    "pageLoadTimeout": 120000,
+    "testFiles": "**/*.feature"
+}
