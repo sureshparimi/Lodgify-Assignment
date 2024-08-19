@@ -11,37 +11,8 @@ The following instructions use Bash, so make sure to install Git Bash before run
 7. Make sure to do smart waits in case slowness on services.
 8. Tests should be able to run on any environment.
 
-## How we'd like to receive the solution?
 
-Clone this repository and upload it as a new public repository in your GitHub account
-Create a new branch in your repository
-Create a pull request with the requested functionality to unchanged master branch in your repository
-Share link to the PR with us
-
-Quick start commands:
-## Installing
-```
-$ npm run install-all
-```
-## Starting mock up server (leave a terminal open for this command, and run the test in another terminal)
-```
-$ npm run dev-server
-
-Note: by default, server.js is using your port 8080, feel free to change it in case you're using it for something else, port 3000 would also be a good alternative. (node server/server.js)
-```
-## Execute Tests
-```
-$ npm run cy:run
-```
-
-Challengue Requirements:
-
-Two HTML files are provided:
-
-*Pricing page: This page allows the users to select different pricing options.
-*Contact page: This page allows the users to fill a form and then send an email.
-
-These simpler version of those pages will require you to add the following tests:
+These simpler version of those pages will add the following tests:
 
 Steps:
 
@@ -61,14 +32,4 @@ Steps:
    This test should also add a random Lorem Ipsum of your choice to "Comment" field
 5. Using your own criteria, add tests according to what you think should be important to cover in this page "Contact". (Optional)
 
-
-IMPORTANT NOTE: Some tests, if followed the requirements correctly, will fail. For those, add an example of a bug report in the test document. 
-
-
-## Troubleshooting
-
-Using the provided steps, everything should work as explained, if not, make sure your Node.js is updated. In case you have any issues with Cypress.io, you can always install another test framework. In these cases, please also add extra information in the README. 
-
-In case you change your configuration, make sure to change your package.json file to run accordingly to avoid any kind of troubles or incompatibilities.
-
-Good luck!
+If you are looking for Automation test solutions in and around Europe and USA, Happy to help you. Connect with me here on Linkedin : https://linkedin.com/in/spairmi
