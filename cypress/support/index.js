@@ -14,11 +14,21 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-Cypress.on('uncaught:exception', (err, runnable) => {
-  return false
-})
+const ignoredExceptions = ['mod_pagespeed_','Cookies is not defined','multiple userscripts installed','e.indexOf is not a function'];
+Cypress.on("uncaught:exception", (err, runnable) => {
+  console.log(`Caught an exception. name - ${err.name} - ${err.message}`);
+
+  for (let index = 0; index < ignoredExceptions.length; index++) {
+    let message = ignoredExceptions[index];
+    if (err.message.includes(message)) {
+      return false;
+    }
+  }
+
+  return true;
+});
